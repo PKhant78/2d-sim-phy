@@ -1,0 +1,16 @@
+﻿  2DShapeApp.cpp
+C:\Users\P\Desktop\Libraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
+  (compiling source file '2DShapeApp.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\stdexcept(100,19):
+      see declaration of 'std::runtime_error'
+      C:\Users\P\Desktop\Libraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
+      see declaration of 'sf::Exception'
+  
+C:\Users\P\source\repos\2DShapeApp\2DShapeApp\2DShapeApp.cpp(33,47): warning C4018: '<': signed/unsigned mismatch
+C:\Users\P\source\repos\2DShapeApp\2DShapeApp\2DShapeApp.cpp(33,88): warning C4018: '<': signed/unsigned mismatch
+  Generating code
+  0 of 13 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  2DShapeApp.vcxproj -> C:\Users\P\source\repos\2DShapeApp\x64\Release\2DShapeApp.exe
