@@ -11,6 +11,11 @@ int main()
     uint_32t height = 600;
     window.create(sf::VideoMode({ width,height }), "My window");
     std::vector<sf::CircleShape> circles;
+    const float gravity = 9.81f;
+    float dt = 0.016f;
+    sf::Vector2f position;
+    sf::Vector2f velocity;
+    bool falling = false;
 
     while (window.isOpen()) 
     {
@@ -41,14 +46,21 @@ int main()
                     }
                 }
             }
-
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::M)) {
-                if (circles.size() > 0) {
-                    sf::Vector2f position = circles[0].getPosition();
-                    circles[0].setPosition(position + sf::Vector2f(1, 0));
-                }
-                    
+                falling = true;
             }
+        }
+
+
+        if (falling == true && !circles.empty()) {
+            position = circles[0].getPosition();
+
+            if (position.y + circles[0].getRadius() < height) {
+                velocity.y += gravity * dt;          
+                position.y += velocity.y * dt;        
+            }
+
+            circles[0].setPosition(position);
         }
 
         window.clear(sf::Color::Black);
@@ -70,5 +82,5 @@ int main()
 
         window.display();
     }
-    
+   
 }
